@@ -35,6 +35,13 @@
 				background-color: brown;
 			}
 		</style>
+		<script>
+			function click() {
+				console.log("function");
+				let btn = document.getElementById("link");
+				btn.innerHTML = "Ya hiciste click";
+			}
+		</script>
 	</head>
 	<body>
 		<!-- Optional JavaScript -->
@@ -49,6 +56,6 @@
 		<br />
 		<br />
 		<button>Click</button>
-		<a class="btn btn-warning" href="./pagina1.html">Click aqui</a>
+		<button id="link" class="btn btn-warning" onclick="click()">Click aqui</button>
 	</body>
 </html>
