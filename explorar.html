@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Búsqueda del Tesoro</title>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<style>
+			body {
+				background-image: url("images/cueva2.jpeg");
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+		</style>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+		<script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+		<script defer>
+			function mostrarCarrusel() {
+				let carrusel = document.getElementById("carrusel");
+				if (carrusel.style.display == "block") {
+					carrusel.style.display = "none";
+					let button = document.getElementById("carruselButton");
+					button.innerHTML = "Ver jeroglíficos";
+					return;
+				} else if (carrusel.style.display == "none") {
+					carrusel.style.display = "block";
+					let button = document.getElementById("carruselButton");
+					button.innerHTML = "Ocultar jeroglíficos";
+					return;
+				}
+			}
+
+			function botonA() {
+				let bottonA = document.getElementById("A");
+				let bottonB = document.getElementById("B");
+				let bottonE = document.getElementById("E");
+				let bottonK = document.getElementById("K");
+
+				if (bottonA.getAttribute("patron") == "incorrecto" && bottonK.getAttribute("patron") == "correcto" && bottonE.getAttribute("patron") == "incorrecto" && bottonB.getAttribute("patron") == "incorrecto") {
+					bottonA.setAttribute("class", "btn btn-success");
+					bottonA.setAttribute("patron", "correcto");
+				} else {	
+					bottonA.setAttribute("class", "btn btn-secondary");
+					bottonA.setAttribute("patron", "incorrecto");
+					bottonB.setAttribute("class", "btn btn-secondary");
+					bottonB.setAttribute("patron", "incorrecto");
+					bottonE.setAttribute("class", "btn btn-secondary");
+					bottonE.setAttribute("patron", "incorrecto");
+					bottonK.setAttribute("class", "btn btn-secondary");
+					bottonK.setAttribute("patron", "incorrecto");
+				}
+			}
+
+			function botonB() {
+				let bottonA = document.getElementById("A");
+				let bottonB = document.getElementById("B");
+				let bottonE = document.getElementById("E");
+				let bottonK = document.getElementById("K");
+
+				if (bottonA.getAttribute("patron") == "correcto" && bottonK.getAttribute("patron") == "correcto" && bottonE.getAttribute("patron") == "correcto" && bottonB.getAttribute("patron") == "incorrecto") {
+					// hacer que se vaya a la pagina camino1.html
+					window.location.href = "puerta.html";
+				} else {
+					bottonA.setAttribute("class", "btn btn-secondary");
+					bottonA.setAttribute("patron", "incorrecto");
+					bottonB.setAttribute("class", "btn btn-secondary");
+					bottonB.setAttribute("patron", "incorrecto");
+					bottonE.setAttribute("class", "btn btn-secondary");
+					bottonE.setAttribute("patron", "incorrecto");
+					bottonK.setAttribute("class", "btn btn-secondary");
+					bottonK.setAttribute("patron", "incorrecto");
+				}
+			}
+
+			function botonE() {
+				let bottonA = document.getElementById("A");
+				let bottonB = document.getElementById("B");
+				let bottonE = document.getElementById("E");
+				let bottonK = document.getElementById("K");
+
+				if (bottonA.getAttribute("patron") == "correcto" && bottonK.getAttribute("patron") == "correcto" && bottonE.getAttribute("patron") == "incorrecto" && bottonB.getAttribute("patron") == "incorrecto") {
+					bottonE.setAttribute("class", "btn btn-success");
+					bottonE.setAttribute("patron", "correcto");
+				} else {
+					bottonA.setAttribute("class", "btn btn-secondary");
+					bottonA.setAttribute("patron", "incorrecto");
+					bottonB.setAttribute("class", "btn btn-secondary");
+					bottonB.setAttribute("patron", "incorrecto");
+					bottonE.setAttribute("class", "btn btn-secondary");
+					bottonE.setAttribute("patron", "incorrecto");
+					bottonK.setAttribute("class", "btn btn-secondary");
+					bottonK.setAttribute("patron", "incorrecto");
+				}
+			}
+
+			function botonK() {
+				let bottonA = document.getElementById("A");
+				let bottonB = document.getElementById("B");
+				let bottonE = document.getElementById("E");
+				let bottonK = document.getElementById("K");
+
+				if (bottonA.getAttribute("patron") == "incorrecto" && bottonK.getAttribute("patron") == "incorrecto" && bottonE.getAttribute("patron") == "incorrecto" && bottonB.getAttribute("patron") == "incorrecto") {
+					bottonK.setAttribute("class", "btn btn-success");
+					bottonK.setAttribute("patron", "correcto");
+				} else {
+					bottonA.setAttribute("class", "btn btn-secondary");
+					bottonA.setAttribute("patron", "incorrecto");
+					bottonB.setAttribute("class", "btn btn-secondary");
+					bottonB.setAttribute("patron", "incorrecto");
+					bottonE.setAttribute("class", "btn btn-secondary");
+					bottonE.setAttribute("patron", "incorrecto");
+					bottonK.setAttribute("class", "btn btn-secondary");
+					bottonK.setAttribute("patron", "incorrecto");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<h1 style="display: flex; justify-content: center">Búsqueda del Tesoro</h1>
+		<div class="container">
+			<div class="center">
+				<p class="white">Exploras la cueva y encuentras antiguos jeroglíficos en las paredes. Resuelves los enigmas y desbloqueas el camino hacia la siguiente etapa de tu aventura.</p>
+				<a href="camino2.html">Regresar</a>
+				<button id="carruselButton" class="btn btn-secondary" onclick="mostrarCarrusel()">Ver jeroglíficos</button>
+			</div>
+		</div>
+		<div class="container">
+			<div class="center" id="carrusel" style="display: none">
+				<div id="carouselId" class="carousel slide" data-ride="carousel" style="margin: 10px">
+					<ul class="carousel-indicators">
+						<li data-target="#carouselId" data-slide-to="0" class="active"></li>
+						<li data-target="#carouselId" data-slide-to="1"></li>
+						<li data-target="#carouselId" data-slide-to="2"></li>
+						<li data-target="#carouselId" data-slide-to="3"></li>
+					</ul>
+					<div class="carousel-inner" role="listbox">
+						<div class="carousel-item active">
+							<img src="images/kappa.jpg" alt="epsilon" />
+						</div>
+						<div class="carousel-item">
+							<img src="images/alpha.jpg" alt="alpha" />
+						</div>
+						<div class="carousel-item">
+							<img src="images/epsilon.jpg" alt="epsilon" />
+						</div>
+						<div class="carousel-item">
+							<img src="images/beta.jpg" alt="beta" />
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+				<div>
+					<button id="A" class="btn btn-secondary" patron="incorrecto" onclick="botonA()">A</button>
+					<button id="B" class="btn btn-secondary" patron="incorrecto" onclick="botonB()">B</button>
+					<button id="E" class="btn btn-secondary" patron="incorrecto" onclick="botonE()">E</button>
+					<button id="K" class="btn btn-secondary" patron="incorrecto" onclick="botonK()">K</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
