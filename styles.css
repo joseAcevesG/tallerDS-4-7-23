@@ -1,0 +1,29 @@
+a{
+    color: green;
+    font-size: x-large;
+    font-style: italic;
+}
+
+h1{
+    margin-top: 100px;
+    font-size:xx-large;
+}
+
+p{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.texto{
+    color: red;
+}
+
+a:hover{
+    color: red;
+    font-size: xx-large;
+}
+
+#parrafo{
+    color: blueviolet;
+    font-style: oblique;
+}
+
