@@ -16,3 +16,14 @@ p{
 .texto{
     color: red;
 }
+
+a:hover{
+    color: red;
+    font-size: xx-large;
+}
+
+#parrafo{
+    color: blueviolet;
+    font-style: oblique;
+}
+
